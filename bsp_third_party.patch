@@ -7,17 +7,4 @@ index df915479..79ca7c27 100644
      /** @var \Drupal\block\Entity\Block $block */
      $block = $this->entityTypeManager->getStorage('block')->load($variables['elements']['#id']);
 -    $styles = $block->getThirdPartySetting('block_style_plugins', $this->pluginId);
--
--    if ($styles) {
--      $this->setConfiguration($styles);
-+    // Check that we loaded a block, in the case that this block is placed via
-+    // Context, it's not a "real" block so it will be null.
 +    $styles = [];
-+    if (!empty($block)) {
-+      $styles = $block->getThirdPartySetting('block_style_plugins', $this->pluginId);
-+      if ($styles) {
-+        $this->setConfiguration($styles);
-+      }
-       return $styles;
-     }
-     else {
