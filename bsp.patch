@@ -1,7 +1,7 @@
 diff --git a/web/modules/contrib/block_style_plugins/src/Plugin/BlockStyleBase.php b/web/modules/contrib/block_style_plugins/src/Plugin/BlockStyleBase.php
 index df915479..79ca7c27 100644
---- a/web/modules/custom/block_style_plugins/src/Plugin/BlockStyleBase.php
-+++ b/web/modules/custom/block_style_plugins/src/Plugin/BlockStyleBase.php
+--- a/web/modules/contrib/block_style_plugins/src/Plugin/BlockStyleBase.php
++++ b/web/modules/contrib/block_style_plugins/src/Plugin/BlockStyleBase.php
 @@ -411,10 +411,14 @@ protected function getStylesFromVariables(array $variables) {
      // Load the block config entity.
      /** @var \Drupal\block\Entity\Block $block */
